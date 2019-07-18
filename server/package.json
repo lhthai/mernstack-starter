@@ -5,7 +5,7 @@
   "main": "server.js",
   "scripts": {
     "dev": "nodemon --exec babel-node server/server.js",
-    "build": "babel -d ./build ./server"
+    "build": "babel -d build server.js libs"
   },
   "keywords": [
     "mern-stack-stater",
