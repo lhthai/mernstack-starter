@@ -1,19 +1,21 @@
 import React from 'react'
 import { Switch, Route } from 'react-router-dom';
-import Loadable from 'react-loadable';
-import Loading from './components/Loading'
 
-const Home = Loadable({ loader: () => import('./containers/Home'), loading: Loading, })
-const NotFound = Loadable({ loader: () => import('./components/NotFound'), loading: Loading, })
+const loading = () => <div className="animated fadeIn pt-3 text-center">Loading...</div>;
+
+const Home = React.lazy(() => import('./containers/Home'))
+const NotFound = React.lazy(() => import('./components/NotFound'))
 
 function Routes(props) {
     return (
-        <Switch>
-            <Route component={Home} exact path="/" />
+        <React.Suspense fallback={loading()}>
+            <Switch>
+                <Route component={Home} exact path="/" />
 
-            { /* Finally, catch all unmatched routes */}
-            <Route component={NotFound} />
-        </Switch>
+                { /* Finally, catch all unmatched routes */}
+                <Route component={NotFound} />
+            </Switch>
+        </React.Suspense>
     )
 }
 
