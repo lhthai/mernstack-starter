@@ -4,7 +4,7 @@
   "description": "Server side for MERN Stack Starter",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon --exec babel-node server/server.js",
+    "dev": "nodemon -L --exec babel-node server/server.js",
     "build": "babel -d build server.js libs"
   },
   "keywords": [
