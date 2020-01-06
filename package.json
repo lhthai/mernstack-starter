@@ -4,8 +4,8 @@
   "description": "Server side for MERN Stack Starter",
   "main": "server.js",
   "scripts": {
-    "dev": "nodemon -L --exec babel-node src/server.js",
-    "build": "babel -d build server.js libs"
+    "dev": "nodemon -L --exec babel-node server/server.js",
+    "build": "babel -d build server"
   },
   "keywords": [
     "mern-stack-stater",
@@ -33,6 +33,12 @@
     "@babel/preset-env": "^7.7.7",
     "@babel/runtime": "^7.7.7",
     "babel-register": "^6.26.0",
-    "nodemon": "^2.0.2"
+    "eslint": "^6.8.0",
+    "eslint-config-airbnb-base": "^14.0.0",
+    "eslint-config-prettier": "^6.9.0",
+    "eslint-plugin-import": "^2.19.1",
+    "eslint-plugin-prettier": "^3.1.2",
+    "nodemon": "^2.0.2",
+    "prettier": "^1.19.1"
   }
 }

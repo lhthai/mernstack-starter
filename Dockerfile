@@ -2,7 +2,7 @@ FROM mhart/alpine-node:10
 
 RUN mkdir -p /usr/src/server
 WORKDIR /usr/src/server
-ENV PATH /usr/src/server/node_modules/.bin:$PATH
+ENV PATH /usr/src/node_modules/.bin:$PATH
 
 COPY . .
 
