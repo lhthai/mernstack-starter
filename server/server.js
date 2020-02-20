@@ -29,7 +29,7 @@ app.get('*', (req, res) => {
   res.sendFile(path.join(__dirname, '../client/build/index.html'));
 });
 
-const main = async () => {
+const startServer = async () => {
   try {
     await mongoose.connect(process.env.MONGODB_URI, {
       useNewUrlParser: true,
@@ -45,4 +45,4 @@ const main = async () => {
   }
 };
 
-main();
+startServer();

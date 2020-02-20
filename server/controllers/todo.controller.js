@@ -1,5 +1,5 @@
 /* eslint-disable linebreak-style */
-import Todo from '../models/Todo';
+import Todo from '../models/todoModel';
 import logger from '../helpers/logger';
 
 export const create = async (req, res) => {
